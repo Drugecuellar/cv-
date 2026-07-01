@@ -4,120 +4,186 @@
     <meta charset="UTF-8">
     <title>Hoja de Vida - Daniel Stiven Ruge Cuellar</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
             background-color: #f4f4f4;
+            padding: 40px 20px;
         }
-
         .container {
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             max-width: 900px;
             margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 5px;
+        /* HEADER */
+        .header { margin-bottom: 24px; }
+        .header h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 4px; }
+        .header .titulo {
+            font-size: 14px;
+            color: #0077B5;
+            margin-bottom: 12px;
+            font-weight: normal;
         }
-
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
         .contacto {
-            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 13px;
+            color: #666;
+            border-top: 2px solid #0077B5;
+            padding-top: 12px;
+        }
+        .contacto a { color: #0077B5; text-decoration: none; }
+        .contacto a:hover { text-decoration: underline; }
+
+        /* SECTIONS */
+        .seccion { margin-top: 28px; }
+        h2 {
+            color: #0077B5;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+        }
+        p { line-height: 1.7; font-size: 14px; color: #2d2d2d; margin-bottom: 8px; }
+
+        /* STACK TABLE */
+        .stack-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+        .stack-table tr:nth-child(even) { background: #f8f8f8; }
+        .stack-table td { padding: 7px 10px; color: #2d2d2d; vertical-align: top; }
+        .stack-table td:first-child {
+            font-weight: bold;
+            color: #0077B5;
+            width: 160px;
+            white-space: nowrap;
         }
 
-        .seccion {
-            margin-top: 25px;
-        }
+        /* EXPERIENCE */
+        .exp-header { margin-bottom: 4px; }
+        .exp-header .job-title { font-weight: bold; font-size: 14px; color: #1a1a2e; }
+        .exp-header .job-meta { font-size: 12.5px; color: #888; margin-bottom: 10px; }
+        ul.bullets { padding-left: 18px; }
+        ul.bullets li { font-size: 13.5px; color: #2d2d2d; line-height: 1.75; margin-bottom: 4px; }
+        ul.bullets li b { color: #1a1a2e; }
+
+        /* EDUCATION & CERTS */
+        .edu-title { font-weight: bold; font-size: 14px; color: #1a1a2e; }
+        .edu-meta { font-size: 12.5px; color: #888; margin-top: 2px; }
+        ul.certs { padding-left: 18px; }
+        ul.certs li { font-size: 13.5px; color: #2d2d2d; line-height: 1.8; }
     </style>
 </head>
 <body>
-
 <div class="container">
 
-    <h1>Daniel Stiven Ruge Cuellar</h1>
-    <h3>Ingeniero de Sistemas</h3>
-
-    <div class="contacto">
-        <p><strong>Teléfono:</strong> +57 3138541255</p>
-        <p><strong>Email:</strong> cuellarrstiven@gmail.com</p>
-        <p><strong>LinkedIn:</strong> 
-            <a href="https://www.linkedin.com/in/daniel-stiven-ruge-cuellar-4281b3225/" target="_blank">
-                Ver Perfil
-            </a>
-        </p>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Daniel Stiven Ruge Cuellar</h1>
+        <p class="titulo">Junior Full-Stack Developer &nbsp;|&nbsp; Next.js · Webflow · AI-assisted dev &nbsp;|&nbsp; Disponible Remoto</p>
+        <div class="contacto">
+            <span>📞 +57 313 854 1255</span>
+            <span>✉️ <a href="mailto:cuellarrstiven@gmail.com">cuellarrstiven@gmail.com</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/daniel-stiven-ruge-cuellar-4281b3225/" target="_blank">LinkedIn</a></span>
+            <span>📍 Chiquinquirá, Colombia</span>
+            <span>🌐 Inglés A2</span>
+        </div>
     </div>
 
+    <!-- PERFIL -->
     <div class="seccion">
         <h2>Perfil Profesional</h2>
         <p>
-            Ingeniero de Sistemas con formación en aseguramiento de calidad de software,
-            bases de datos SQL y comprensión de procesos empresariales. 
-            Cuento con conocimientos en Python y herramientas de pruebas como Postman y Cypress.
-            actualmente me desempeño como developer junior en hipenmedia.
-        </p>
-        <p>
-            Uso herramientas con asistencia de inteligencia artificial como “Cursor”
-            para mejorar el aprendizaje, la productividad y la calidad del trabajo en programación.
-        </p>
-        <p>
-            Me caracterizo por mi pensamiento analítico, orientación al detalle
-            y compromiso con el aprendizaje continuo.
+            Ingeniero de Sistemas y Junior Full-Stack Developer con experiencia práctica en desarrollo web moderno,
+            adquirida en proyectos reales para clientes en Hipenmedia — incluyendo un proyecto que salió a producción
+            para <strong>Always Bank</strong>. Trabajo con un stack moderno y de alta demanda: Next.js, Vercel,
+            Neon (PostgreSQL serverless) y Webflow. Implemento flujos de autenticación con Clerk, gestiono versiones
+            con Git, y uso herramientas de desarrollo asistidas por IA como Cursor para escribir código más limpio
+            y eficiente. Me caracterizo por pensamiento analítico, orientación al detalle y compromiso con el
+            aprendizaje continuo.
         </p>
     </div>
 
+    <!-- STACK -->
+    <div class="seccion">
+        <h2>Stack Tecnológico</h2>
+        <table class="stack-table">
+            <tr>
+                <td>Frontend</td>
+                <td>Next.js · React · JavaScript · TypeScript · HTML · Webflow · CSS</td>
+            </tr>
+            <tr>
+                <td>Backend & Datos</td>
+                <td>Node.js · PostgreSQL · Neon · SQL · APIs Rest · Hono</td>
+            </tr>
+            <tr>
+                <td>Auth & Infra</td>
+                <td>Clerk · Vercel · Git</td>
+            </tr>
+            <tr>
+                <td>Lenguajes</td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>Herramientas IA</td>
+                <td>Cursor</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="seccion">
+        <h2>Experiencia</h2>
+        <div class="exp-header">
+            <div class="job-title">Desarrollador Web Junior — Hipenmedia</div>
+            <div class="job-meta">Feb. 2026 – Actualidad &nbsp;·&nbsp; Contrato &nbsp;·&nbsp; Remoto (Estados Unidos)</div>
+        </div>
+        <ul class="bullets">
+            <li><b>Proyecto en producción — Always Bank:</b> Participé en el desarrollo de la plataforma web del banco, implementando funcionalidades full-stack con Next.js, Neon y Clerk que hoy están en uso real por clientes del banco.</li>
+            <li>Desarrollo y mantenimiento de sitios web en Webflow — componentes personalizados, menús desplegables y sliders con precisión exacta respecto a diseños en Figma.</li>
+            <li>Implementación de estándares ADA: corrección de jerarquía de encabezados (H1–H6) y limpieza de etiquetas ARIA para garantizar accesibilidad a personas con discapacidades.</li>
+            <li>Configuración de backend moderno con Neon (PostgreSQL serverless) para aplicaciones con baja latencia y datos en tiempo real.</li>
+            <li>Integración de Google Tag Manager y Hotjar para analítica y seguimiento del comportamiento del usuario.</li>
+            <li>Participación en flujos de A/B testing con Flashmint y GrowthBook para optimización de conversión.</li>
+            <li>Uso diario de Cursor para acelerar refactorización de código y resolución de errores lógicos en entornos CI/CD sobre Vercel.</li>
+        </ul>
+    </div>
+
+    <!-- EDUCACIÓN -->
     <div class="seccion">
         <h2>Educación</h2>
-        <p><strong>Ingeniero de Sistemas</strong> – UNISANGIL Chiquinquirá</p>
-        <p>2019 - 2026</p>
+        <div class="edu-title">Ingeniería de Sistemas — UNISANGIL Chiquinquirá</div>
+        <div class="edu-meta">2019 – 2025 &nbsp;·&nbsp; Graduado</div>
     </div>
 
+    <!-- CERTIFICACIONES -->
     <div class="seccion">
-        <h2>Cursos</h2>
-        <ul>
-            <li>Curso de Software Testing desde Cero – Udemy</li>
-            <li>Curso de API Testing con Postman – Udemy</li>
-            <li>Curso de Cypress: Master en Automatización Test QA – Udemy</li>
+        <h2>Cursos y Certificaciones</h2>
+        <ul class="certs">
+            <li>Software Testing desde Cero — Udemy</li>
+            <li>API Testing con Postman — Udemy</li>
+            <li>Cypress: Master en Automatización Test QA — Udemy</li>
         </ul>
     </div>
 
+    <!-- HABILIDADES CLAVE -->
     <div class="seccion">
-        <h2>Skills y Herramientas</h2>
-        <ul>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>cursor</li> 
-            <li>Postman</li>
-            <li>Cypress</li>
-            <li>Trabajo en equipo</li>
-            <li>Proactividad</li>
-            <li>Autodidacta</li>
-            <li>Adaptación al cambio</li>
+        <h2>Habilidades Clave</h2>
+        <ul class="bullets">
+            <li><b>Git y control de versiones:</b> Manejo de ramas, resolución de conflictos y trabajo colaborativo.</li>
+            <li><b>Ojo para el diseño:</b> Capacidad de replicar espaciado, tipografía y feel de un diseño Figma exactamente en código.</li>
+            <li><b>Resolución de problemas:</b> Depuración autónoma de errores CSS y fallos en lógica de bases de datos.</li>
+            <li><b>SEO Técnico:</b> Estructuración de sitios con buenas prácticas para indexación en buscadores.</li>
+            <li><b>Validación de APIs:</b> Testing y validación de APIs REST con Postman y Playwright.</li>
         </ul>
-    </div>
-
-    <div class="seccion">
-        <h2>Idiomas</h2>
-        <p>Inglés B2</p>
     </div>
 
 </div>
-
 </body>
 </html>
